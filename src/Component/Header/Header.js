@@ -6,11 +6,22 @@ import "./header.css";
 const navLinks = [
   {
     display: "Home",
-    url: "#",
+    url: "/",
   },
   {
     display: "Plan for college",
-    url: "#",
+    url: "/college",
+    // dropdown: [
+    //   {
+    //     display: "Admissions",
+    //     url: "/college/admissions",
+    //   },
+    //   {
+    //     display: "Scholarships",
+    //     url: "/college/scholarships",
+    //   },
+    //   // Add more dropdown items as needed
+    // ],
   },
   {
     display: "About",
@@ -47,28 +58,43 @@ const Header = () => {
           </div>
 
           <div className="nav d-flex align-items-center gap-5">
-            {/* <div className="nav__menu" ref={menuRef} onClick={menuToggle}> */}
+            <div className="nav__menu" ref={menuRef} onClick={menuToggle}>
             <div className="nav__menu"  onClick={menuToggle}>
               <ul className="nav__list">
                 {navLinks.map((item, index) => (
                   <li key={index} className="nav__item">
                     <a href={item.url}>{item.display}</a>
+                    {index === 2 && (
+              <ul className="dropdown-menu">
+                <li>
+                  <a href="/college/admissions">Admissions</a>
+                </li>
+                <li>
+                  <a href="/college/scholarships">Scholarships</a>
+                </li>
+                {/* Add more dropdown items as needed */}
+              </ul>
+            )}
                   </li>
+                  
+                  
                 ))}
+                
               </ul>
             </div>
-
+{/* 
             <div className="nav__right">
               <p className="mb-0 d-flex align-items-center gap-2">
                 <i class="ri-phone-line"></i> +88 0123456789
               </p>
-            </div>
+            </div> */}
           </div>
 
           <div className="mobile__menu">
             <span>
               <i class="ri-menu-line" onClick={menuToggle}></i>
             </span>
+          </div>
           </div>
         </div>
       </Container>

@@ -1,4 +1,4 @@
-searchItem {
+.searchItem {
     border: 1px solid lightgray;
     padding: 10px;
     border-radius: 5px;
@@ -6,6 +6,7 @@ searchItem {
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 20px;
+    background-color: #E6F8F7;
   }
   
   .siImg {
@@ -19,10 +20,11 @@ searchItem {
     flex-direction: column;
     gap: 10px;
     flex: 2;
+    background-color: #E6F8F7;
   }
   
   .siTitle {
-    font-size: 20px;
+    font-size: 15px;
     color: #0071c2;
   }
   

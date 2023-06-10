@@ -6,6 +6,7 @@ import { Link , useNavigate} from 'react-router-dom';
 const Signup=()=> {
     const [signIn, toggle] = React.useState(true);
      return(
+        <Components.SignupBody>
          <Components.Container>
              <Components.SignUpContainer signinIn={signIn}>
                  <Components.Form>
@@ -56,6 +57,7 @@ const Signup=()=> {
              </Components.OverlayContainer>
 
          </Components.Container>
+         </Components.SignupBody>
      )
 }
 

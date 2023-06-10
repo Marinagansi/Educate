@@ -11,8 +11,8 @@ const AboutUs = () => {
       <Container>
         <Row>
           <Col lg="6" md="6">
-            <div className="about__img" style={{ width: "200" }}>
-              <img src={aboutImg} alt="" className="w-100" />
+            <div className="about__img" >
+              <img src={aboutImg} alt="" style={{ height: "350px",width:"650px" }} />
             </div>
           </Col>
 
