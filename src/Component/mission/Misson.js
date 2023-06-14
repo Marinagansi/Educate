@@ -20,6 +20,8 @@ const FeatureData = [
     desc: "We're working to turn our passion for service provide college information to students into a booming online website",
     icon: "ri-contacts-book-line",
   },
+  
+ 
 ];
 
 const Features = () => {

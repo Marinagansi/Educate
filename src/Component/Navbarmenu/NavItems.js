@@ -14,7 +14,7 @@ export const navItems = [
     {
       id: 3,
       title: "Career",
-      path: "/College",
+      path: "/Career",
       cName: "nav-item",
     },
     {

@@ -25,7 +25,7 @@ const Signup=()=> {
                       <Components.Input type='password' placeholder='Password' />
                       <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
                       <Components.Button>
-                      <Link to={"/home"}>Sign in</Link>
+                      <Link to={"/"}>Sign in</Link>
                         </Components.Button>
                   </Components.Form>
              </Components.SignInContainer>
