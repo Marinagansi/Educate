@@ -5,6 +5,7 @@
  } from "react-router-dom";
 
 import Home from './pages/Home/Home';
+import Uni from './pages/College/College';
 import Signup from './registration/Signup';
 import College from './pages/List/List';
 
@@ -15,6 +16,7 @@ import College from './pages/List/List';
         <Route path="/" element={<Home />}  />
       <Route path="/Signup" element={<Signup />}  /> 
       <Route path="/college" element={<College />}  /> 
+      <Route path="/uni" element={<Uni />}  /> 
         </Routes> 
       </>
 

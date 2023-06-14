@@ -1,0 +1,23 @@
+.container-filter {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    gap: 20px; 
+    width: fit-content;
+    margin-left: auto;
+    margin-right:auto;/* Optional: Adds a 10px gap between columns */
+  }
+  .column-filter{
+
+   text-align: center;
+  }
+  .column-filter h3 {
+    /* background-color: #f2f2f2;
+    padding: 10px;
+    border: ; */
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1rem;
+    color:black
+    
+  }

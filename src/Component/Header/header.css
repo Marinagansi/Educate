@@ -24,6 +24,9 @@
     color:  #639bdb;
   }
   
+  .nav__item a:active {
+    color:  #234f7d;
+  }
   .nav__right p {
     font-weight: 500;
     color:  #243B55;
@@ -43,6 +46,36 @@
   .mobile__menu {
     display: none;
   }
+  /* Active Menu Item */
+.nav__item a.active {
+  color: blue;
+}
+
+/* Dropdown Menu */
+.dropdown__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  list-style: none;
+}
+
+.dropdown__item {
+  margin-bottom: 10px;
+}
+
+.dropdown__item a {
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown__item a:hover {
+  color: blue;
+}
+  
+  
   
   @media only screen and (max-width: 991px) {
     .nav__menu {

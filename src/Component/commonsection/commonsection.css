@@ -1,0 +1,18 @@
+.common__section {
+    background: linear-gradient(rgba(223, 167, 167, 0.6), rgba(231, 179, 179, 0.6)),
+      url('../../assets/images/girl_student.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+  }
+  
+  
+  .appoint__section {
+    background:
+      url('../../assets/images/girl_student.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 230px 0;
+  }

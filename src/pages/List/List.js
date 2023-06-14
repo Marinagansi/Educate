@@ -1,5 +1,9 @@
 import "./list.css";
 import Header from "../../Component/Header/Header";
+import Helmet from "../../Component/Helmet";
+import Navbar from "../../Component/Navbarmenu/Navbar";
+import { Container, Row, Col } from "reactstrap";
+import CommonSection from "../../Component/commonsection/Commonsection";
 import HeroSection from "../../Component/Hero-section/HeroSection";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
@@ -12,9 +16,16 @@ const List = () => {
 
   return (
     <div>
+<Navbar/>
+      
+      {/* <HeroSection/> */}
+      <Helmet title="Signup">
+        <section className="p-0">
+          <CommonSection title="Choose your best style here" />
+        </section>
+      
+      </Helmet>
 
-      <Header />
-      <HeroSection/>
 
       <div className="listContainer">
         <div className="listWrapper">
