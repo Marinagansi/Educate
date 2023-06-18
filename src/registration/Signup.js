@@ -11,9 +11,9 @@ const Signup=()=> {
              <Components.SignUpContainer signinIn={signIn}>
                  <Components.Form>
                      <Components.Title style={{color:'black'}}>Create Account</Components.Title>
-                     <Components.Input type='text' placeholder='Name' />
-                     <Components.Input type='email' placeholder='Email' />
-                     <Components.Input type='password' placeholder='Password' />
+                     <Components.Inputs type='text' placeholder='Name' />
+                     <Components.Inputs type='email' placeholder='Email' />
+                     <Components.Inputs type='password' placeholder='Password' />
                      <Components.Button>Sign Up</Components.Button>
                  </Components.Form>
              </Components.SignUpContainer>
@@ -21,11 +21,11 @@ const Signup=()=> {
              <Components.SignInContainer signinIn={signIn}>
                   <Components.Form>
                       <Components.Title style={{color:'black'}}>Sign in</Components.Title>
-                      <Components.Input type='email' placeholder='Email' />
-                      <Components.Input type='password' placeholder='Password' />
+                      <Components.Inputs type='email' placeholder='Email' />
+                      <Components.Inputs type='password' placeholder='Password' />
                       <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
                       <Components.Button>
-                      <Link to={"/"}>Sign in</Link>
+                      <Link to={"/"} style={{"text-decoration":"none", color:"white"}}>Sign in</Link>
                         </Components.Button>
                   </Components.Form>
              </Components.SignInContainer>

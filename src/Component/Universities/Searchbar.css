@@ -14,7 +14,7 @@
     
   }
   
-  input {
+  .input-wrapper input {
     background-color: transparent;
     border: none;
     height: 100%;

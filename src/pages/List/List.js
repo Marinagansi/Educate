@@ -21,7 +21,7 @@ const List = () => {
       {/* <HeroSection/> */}
       <Helmet title="Signup">
         <section className="p-0">
-          <CommonSection title="Choose your best style here" />
+          <CommonSection title=" “Opportunities don’t happen. You create them.”" />
         </section>
       
       </Helmet>
@@ -29,7 +29,7 @@ const List = () => {
 
       <div className="listContainer">
         <div className="listWrapper">
-          <div className="listSearch">
+          {/* <div className="listSearch">
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
               <label>Majors</label>
@@ -83,7 +83,7 @@ const List = () => {
               </div>
             </div>
             <button>Search</button>
-          </div>
+          </div> */}
           <div className="listResult">
             <SearchItem />
             <SearchItem />

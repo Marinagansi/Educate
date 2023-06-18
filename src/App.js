@@ -8,6 +8,7 @@ import Home from './pages/Home/Home';
 import Uni from './pages/College/College';
 import Signup from './registration/Signup';
 import College from './pages/List/List';
+import Collegebyid from './pages/List/collegebyid';
 import Career from './pages/careerpage/careerpage';
 
  function App() {
@@ -19,6 +20,7 @@ import Career from './pages/careerpage/careerpage';
       <Route path="/college" element={<College />}  /> 
       <Route path="/uni" element={<Uni />}  />
       <Route path="/Career" element={<Career/>}  />  
+      <Route path="/Collegebyid" element={<Collegebyid/>}  /> 
         </Routes> 
       </>
 

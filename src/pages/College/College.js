@@ -10,8 +10,8 @@ const Uni=()=>{
 <Navbarmenu/>
 <SearchBar/>
 <Filter/>
-
-<div className="containers" style={{width:"100%", height:400, objectFit:"cover", margin:0}}>
+<div></div>
+<div className="containers" style={{width:"100%", height:300, objectFit:"cover", "margin-top":"18px"}}>
 <img src={building} alt=""style={{width:"100%"}} />
 
 </div>

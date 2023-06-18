@@ -3,7 +3,7 @@ import Header from "../../Component/Header/Header";
 import Helmet from "../../Component/Helmet";
 import Navbar from "../../Component/Navbarmenu/Navbar";
 import { Container, Row, Col } from "reactstrap";
-import CommonSection from "../../Component/commonsection/Commonsection";
+import ExploreSection from "../../Component/commonsection/exploresection";
 import HeroSection from "../../Component/Hero-section/HeroSection";
 import CareerPage from "../../Component/career/Career";
 
@@ -17,7 +17,7 @@ const Career=()=>{
         {/* <HeroSection/> */}
         <Helmet title="Signup">
           <section className="p-0">
-            <CommonSection title="career" />
+            <ExploreSection title="career" />
           </section>
           <Container>
           <Row>

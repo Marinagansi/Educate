@@ -69,7 +69,7 @@ export const SignupBody = styled.div`
  color:white;
  `;
  
- export const Input = styled.input`
+ export const Inputs = styled.input`
  background-color: #eee;
  border: none;
  padding: 12px 15px;
