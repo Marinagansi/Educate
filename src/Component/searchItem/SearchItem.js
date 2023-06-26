@@ -11,13 +11,16 @@ const SearchItem = () => {
       <div className="siDesc">
         <h1 className="siTitle">Softwarica college of IT and Ecommerce</h1>
         <span className="siDistance">Dilibazar Kathmandu</span>
-        {/* <span className="siTaxiOp">Free airport taxi</span>  */}
         <span className="siSubtitle">Bsc.Hons computing</span>
+        <span className="siTaxiOp">4 year.public.TU affililated</span> 
+        <span className="siTaxiOp">68% graduate rate</span>
+        {/* <span className="siTaxiOp"></span> */}
       </div>
       <div className="siDetails">
         <div className="siRating"></div>
         <div className="siDetailTexts">
-          <button className="siCheckButton">
+          <button className="siCheckButton" >
+            Apply now
             <Link to={"/Collegebyid"}>Apply now</Link>
           </button>
         </div>

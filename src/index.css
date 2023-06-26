@@ -32,7 +32,8 @@ p {
   color: #ebe4e4;
   font-size: 1rem;
   line-height: 35px;
-  font-family: "Andada Pro", serif;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Andada Pro", serif; */
   font-weight: 400;
 }
 
