@@ -50,7 +50,7 @@ const Events = () => {
               </div>
 
               <div className="w-50 text-end">
-                <button className="btn">See All</button>
+                {/* <button className="btn" >See All</button> */}
               </div>
             </div>
           </Col>

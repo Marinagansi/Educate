@@ -4,11 +4,11 @@
     height: 4rem;
     border-radius: 10px;
     padding: 0 15px;
-    box-shadow: 0px 0px 8px #ddd;
+    box-shadow: 0px 0px 6px #ddd;
     background-color: #dce1e8;
     display: flex;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 7.5rem;
     margin-left: 25%;
     
     
@@ -30,4 +30,5 @@
   
   #search-icon {
     color: royalblue;
+    margin-right: 1;
   }

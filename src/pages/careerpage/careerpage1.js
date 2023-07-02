@@ -6,18 +6,20 @@ import SearchBar from '../../Component/Careers/Blog/SearchBar';
 import { blogList } from '../../Component/Careers/config/data';
 import Navbar from "../../Component/Navbarmenu/Navbar";
 import "./styles.css";
-
-
 import Helmet from "../../Component/Helmet";
-
 import { Container, Row, Col } from "reactstrap";
 import ExploreSection from "../../Component/commonsection/exploresection";
-import HeroSection from "../../Component/Hero-section/HeroSection";
-import CareerPage from "../../Component/career/Career";
 
 const CHome = () => {
   const [blogs, setBlogs] = useState(blogList);
   const [searchKey, setSearchKey] = useState('');
+
+  const data=[
+    "UI/UX",
+    "Fashion Design",
+    "software development",
+    
+  ]
 
   // Search submit
   const handleSearchBar = (e) => {
@@ -55,6 +57,7 @@ const CHome = () => {
 
       {/* Search Bar */}
       <SearchBar
+      data={data}
         value={searchKey}
         clearSearch={handleClearSearch}
         formSubmit={handleSearchBar}

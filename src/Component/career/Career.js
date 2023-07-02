@@ -11,17 +11,17 @@ import './career.css';
 const OUR__MEMBERS = [
   {
     name: 'Jhon Doe',
-    experience: '5 years of experience',
-    fbUrl: '#',
-    instUrl: '#',
-    twitUrl: '#',
-    linkedinUrl: '#',
+    experience: 'wide range of programs, classes, internships, and an entire online high school. ',
     imgUrl:courseImg1,
   },
 
   {
     name: 'David Lisa',
-    experience: '5 years of experience',
+    experience: 'Our world-class faculty challenge young people to explore and achieve – through STEM research, internationally focused courses, and arts experiences.',
+    fbUrl: '#',
+    instUrl: '#',
+    twitUrl: '#',
+    linkedinUrl: '#',
     fbUrl: '#',
     instUrl: '#',
     twitUrl: '#',
@@ -31,7 +31,7 @@ const OUR__MEMBERS = [
 
   {
     name: 'Hilton King',
-    experience: '5 years of experience',
+    experience: 'Learn from our expert faculty as you grow your knowledge in your professional sphere or prepare to pivot into a new career.',
     fbUrl: '#',
     instUrl: '#',
     twitUrl: '#',
@@ -41,7 +41,11 @@ const OUR__MEMBERS = [
 
   {
     name: 'Jhon Doe',
-    experience: '5 years of experience',
+    experience: 'Our world-class faculty challenge young people to explore and achieve – through STEM research, internationally focused courses, and arts experiences.',
+    fbUrl: '#',
+    instUrl: '#',
+    twitUrl: '#',
+    linkedinUrl: '#',
     fbUrl: '#',
     instUrl: '#',
     twitUrl: '#',
@@ -53,28 +57,20 @@ const OUR__MEMBERS = [
 const career = () => {
   return (
     <>
+    <h1 className="Uniheading">Academic programs</h1>
       {OUR__MEMBERS.map((item, index) => (
         <Col lg="3" md="3" sm="4" xs="6" className="mb-4" key={index}>
           <div className="single__member">
             <div className="single__member__img">
               <img src={item.imgUrl} alt="" className="w-100" />
               <div className="single__member__social">
-                <Link to={item.fbUrl}>
-                  <i class="ri-facebook-line"></i>
-                </Link>
-                <Link to={item.instUrl}>
-                  <i class="ri-instagram-line"></i>
-                </Link>
-                <Link to={item.linkedinUrl}>
-                  <i class="ri-linkedin-line"></i>
-                </Link>
-                <Link to={item.twitUrl}>
-                  <i class="ri-twitter-line"></i>
-                </Link>
+                
+                
+                
               </div>
             </div>
 
-            <h6 className="text-center mb-0 mt-3 header" >{item.name}</h6>
+            {/* <h6 className="text-center mb-0 mt-3 header" >{item.name}</h6> */}
             <p className="section__description text-center">
               {item.experience}
             </p>

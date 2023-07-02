@@ -63,5 +63,41 @@
     
     color: red;
   }
-
+  /* @media only screen and (max-width: 991px) {
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:  #243B55;
+      z-index: 99;
+      display: none;
+    }
   
+    .nav-item {
+      position: absolute;
+      background: #fff;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 999;
+      padding-top: 80px;
+    }
+  
+    .mobile__menu {
+      display: block;
+    }
+    .nav__right {
+      display: none;
+    }
+  
+    .active__menu {
+      display: block;
+    }
+  }
+   */

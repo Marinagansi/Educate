@@ -28,24 +28,41 @@
     font-size: 15px;
     color: #0071c2;
     line-height: 40px;
+    margin-bottom: -0.7rem;
+    margin-top: -1rem;
   }
-  
+  .siTitles {
+    font-size: 15px;
+    color: #0071c2;
+    line-height: 40px;
+    margin-bottom: 0.5rem;
+
+  }
   .siDistance {
-    font-size: 12px;
+    font-size: 16px;
+    /* font-weight: bold; */
   }
+  .siDistances {
+    font-size: 12px;
   
+  }
   .siTaxiOp {
     font-size: 12px;
-    background-color: #008009;
+    background-color: #5cbff8;
     color: white;
     width: max-content;
     padding: 3px;
     border-radius: 5px;
+    font-weight: bold;
   }
   
   .siSubtitle{
+    font-size: 16px;
+    /* font-weight: bold; */
+  }
+  .siSubtitles{
     font-size: 12px;
-    font-weight: bold;
+    
   }
   
   .siFeatures{
@@ -69,6 +86,16 @@
     flex-direction: column;
     justify-content: space-between
   }
+  .libutton{
+   
+      background-color: #003580;
+      color: white;
+      font-weight: bold;
+      padding: 10px 5px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+  }
   
   .siRating{
     display: flex;
@@ -86,7 +113,7 @@
    border: none;
   }
   
-  .siDetailTexts{
+  .siDetailText{
     text-align: right;
     display: flex;
     flex-direction: column;

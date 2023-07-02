@@ -1,116 +1,123 @@
 import "./list.css";
-import Header from "../../Component/Header/Header";
-import Helmet from "../../Component/Helmet";
 import Navbar from "../../Component/Navbarmenu/Navbar";
+import Testimonial from "../../Component/testimonial/Testmonial";
 import { Container, Row, Col } from "reactstrap";
-import CommonSection from "../../Component/commonsection/Commonsection";
-import HeroSection from "../../Component/Hero-section/HeroSection";
-import { useLocation } from "react-router-dom";
-import { useState } from "react";
-import { format } from "date-fns";
-import { DateRange } from "react-date-range";
-import SearchItem from "../../Component/searchItem/SearchItem";
+import CareerPage from "../../Component/career/Career";
 
-const collegebyid = () => {
+
+const collegebyid = ({uni}) => {
+
   return (
     <div>
       <Navbar />
-
-      {/* <HeroSection/> */}
-      <Helmet title="Signup">
-        <section className="p-0">
-          <CommonSection title="Choose your best style here" />
-        </section>
-      </Helmet>
+    
+    
+        <div className='emptyList-wrapS'>
+      <img src={"http://localhost:3000" + uni.image} alt='empty' />
+      </div>
+      <h1 className="Uniheading">{uni.name}</h1>
 
       <div className="listContainer">
         <div className="listWrapper">
           <div className="listSearch">
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
-              <button>overview</button>
-              <button>Location</button>
-              <button>Academic programs</button>
-              <button>Major</button>
-              <button>Admisions</button>
-              <button>Tuition and Fees</button>
+              <button className="sidebuttton"><a href='#overview'>Overview</a></button>
+              <button className="sidebuttton"><a href='#location'>Location</a></button>
+              <button className="sidebuttton"><a href='#contact'> Contact</a></button>
+              <button className="sidebuttton"> <a href='#Major'>Major</a></button>
+              <button className="sidebuttton"> <a href='#admission'> Admission</a></button>
+              <button className="sidebuttton"><a href='#tuition'> Tuition and fees</a></button>
             </div>
-            <button>Apply form</button>
+            <button ><a href="https://apply.commonapp.org/login?ma=327&tref=3003" style={{"text-decoration":"none","color":"white"}}>Apply form</a></button>
           </div>
           <div className="listResult">
          
             <div className="searchItem">
             <div className="siDesc">
-              <h1 className="siTitle">overview</h1>
-              <span className="siDistance">Dilibazar Kathmandu</span>
+              <h1 className="siTitle " id="overview">overview</h1>
+              <span className="siDistance">{uni.overview}</span>
               {/* <span className="siTaxiOp">Free airport taxi</span>  */}
-              <span className="siSubtitle">Bsc.Hons computing</span>
+              
             </div>
             </div>
 
             <div className="searchItem">
             <div className="siDesc">
-              <h1 className="siTitle">Location</h1>
-              <span className="siDistance">Dilibazar Kathmandu</span>
-              {/* <span className="siTaxiOp">Free airport taxi</span>  */}
-              <span className="siSubtitle">Bsc.Hons computing</span>
+              <h1 className="siTitle location" id="location">Location</h1>
+              <span className="siDistance">{uni.location}</span>
+              
             </div>
             </div>
 
             <div className="searchItem">
             <div className="siDesc">
-              <h1 className="siTitle">Academic programs</h1>
-              <span className="siDistance">Dilibazar Kathmandu</span>
-              {/* <span className="siTaxiOp">Free airport taxi</span>  */}
-              <span className="siSubtitle">Bsc.Hons computing</span>
+              <h1 className="siTitle" id="contact">contact</h1>
+              <span className="siDistance">{uni.phone}</span>
+               <span className="siSubtitle">{uni.types}</span>
+              
             </div>
             </div>
            
 
             <div className="searchItem">
             <div className="siDesc">
-              <h1 className="siTitle">Major</h1>
-              <span className="siDistance">Dilibazar Kathmandu</span>
-              {/* <span className="siTaxiOp">Free airport taxi</span>  */}
-              <span className="siSubtitle">Bsc.Hons computing</span>
+              <h1 className="siTitle" id="major">Major</h1>
+              <span className="siDistance">{uni.major}</span>
+               
+            
             </div>
             </div>
             <div className="searchItem">
             <div className="siDesc">
-              <h1 className="siTitle">Admission</h1>
-              <span className="siDistance">Dilibazar Kathmandu</span>
-              {/* <span className="siTaxiOp">Free airport taxi</span>  */}
-              <span className="siSubtitle">Bsc.Hons computing</span>
+              <h1 className="siTitle " id="admission">Admission</h1>
+              
+              <span className="siDistance">{uni.admission}</span>
+          
             </div>
-            </div> <div className="searchItem">
+            </div>
+             <div className="searchItem">
             <div className="siDesc">
-              <h1 className="siTitle">Tution and fees</h1>
-              <span className="siDistance">Dilibazar Kathmandu</span>
+              <h1 className="siTitle "id="tuition">Tution and fees</h1>
+
+              <span className="siDistance">{uni.fees}</span>
+              {/* <div className="siRating">kk</div> */}
               {/* <span className="siTaxiOp">Free airport taxi</span>  */}
-              <span className="siSubtitle">Bsc.Hons computing</span>
+              {/* <span className="siSubtitle">Bsc.Hons computing</span> */}
             </div>
+          
             </div> 
-           
-            {/* <div className="siDesc">
-              <h1 className="siTitle">overview</h1>
-              <span className="siDistance">Dilibazar Kathmandu</span>
-             
-              <span className="siSubtitle">Bsc.Hons computing</span>
-            </div> */}
- 
-            {/* <div className="siDetails">
-              <div className="siRating"></div>
-              <div className="siDetailTexts">
-                <button className="siCheckButton"> */}
-                  {/* <Link to={"/Collegebyid"}>Apply now</Link> */}
-                {/* </button>
-              </div>
-            </div> */} 
+
+          
+        
+          
+          
+            
           </div>
+          
+          
         </div>
+        
       </div>
+      
+        
+            
+      <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-5">
+              {/* <h6 className="section__subtitle">Experts</h6> */}
+              {/* <h2 className="siTitle "></h2>
+              <h1 className="Uniheading">Academic Programs</h1> */}
+            </Col>
+            <CareerPage/>
+          </Row>
+        </Container>
+          
+         
+       
+      
     </div>
-    // </div>
+  
   );
 };
 

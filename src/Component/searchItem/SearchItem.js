@@ -1,31 +1,72 @@
+import React, {useState, useEffect} from 'react';
 import "./searchItem.css";
+import {calculateRange, sliceData} from '../../utils/table-pagination';
+import universities from '../../service/Uniservice';
 import { Link, useNavigate } from "react-router-dom";
-const SearchItem = () => {
+
+import { FaAddressBook,FaPhone,FaEnvelopeOpen} from "react-icons/fa";
+const SearchItem = ({university,setUniversity}) => {
+  const [page,setPage]=useState(1);
+  const [pagination,setPagination]=useState([]);
+
+
+  // Function to get all univerities
+  useEffect(()=>{
+    universities.gettalluniversity().
+    then (response=>{
+      setPagination(calculateRange(response.data.data, 5));
+      setUniversity(sliceData(response.data.data, page, 5));
+         //setproduct(response.data.data);
+         console.log(response.data)
+    }).catch(err=>console.log(err))
+  },[])
+
+
+ 
+
+   // Change Page 
+   const __handleChangePage = (new_page) => {
+    setPage(new_page);
+   universities.getAllproduct().then(response=>{
+        setPagination(calculateRange(response.data.data, 5));
+        setUniversity(sliceData(response.data.data, page, 5));
+        //setproduct(response.data.data);
+        console.log(response.data)
+    }).catch(err=>console.log(err))
+    // setproduct(sliceData(product, new_page, 5));
+}
+
   return (
+    <>
+   {university.length !==0 ? university.map((item,index)=>(
     <div className="searchItem">
-      <img
-        src="https://cf.bstatic.com/xdata/images/hotel/square600/261707778.webp?k=fa6b6128468ec15e81f7d076b6f2473fa3a80c255582f155cae35f9edbffdd78&o=&s=1"
-        alt=""
-        className="siImg"
-      />
-      <div className="siDesc">
-        <h1 className="siTitle">Softwarica college of IT and Ecommerce</h1>
-        <span className="siDistance">Dilibazar Kathmandu</span>
-        <span className="siSubtitle">Bsc.Hons computing</span>
-        <span className="siTaxiOp">4 year.public.TU affililated</span> 
-        <span className="siTaxiOp">68% graduate rate</span>
-        {/* <span className="siTaxiOp"></span> */}
-      </div>
-      <div className="siDetails">
-        <div className="siRating"></div>
-        <div className="siDetailTexts">
-          <button className="siCheckButton" >
-            Apply now
-            <Link to={"/Collegebyid"}>Apply now</Link>
-          </button>
-        </div>
-      </div>
+      
+        <img
+          src={"http://localhost:3000" + item.image}
+          alt=""
+        
+          className="siImg" /><div className="siDesc">
+            <h1 className="siTitles">{item.name}</h1>
+            <span className="siDistances"><FaAddressBook/> {item.location}</span>
+          
+            {/* <span className="siSubtitles">{item.fees}</span> */}
+            {/* <span className="siTaxiOps">{item.admission}</span> */}
+            {/* <span className="siTaxiOp">{item.major}</span> */}
+
+            <span className="siSubtitles"><FaPhone/> {item.phone}</span>
+            <span className="siSubtitles"><FaEnvelopeOpen/> {item.types}</span>
+          </div><div className="siDetails">
+            <div className="siRating"></div>
+            <div className="siDetailText">
+            <Link className="siCheckButton"to={`/college/${item._id}`} style={{"text-decoration":"none","text-align":"center"}}>Apply now</Link>
+             
+            </div>
+          </div>
+      
+      
     </div>
+    )):null}
+    </>
   );
 };
 

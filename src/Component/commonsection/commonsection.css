@@ -7,19 +7,19 @@
     padding: 80px 0;
   }
   .appoint__section .section__title{
-    color: black;
+    color:white;
     font-size: 20px;
-    background-color: black;
+    /* background-color: black; */
     
   }
   
   .appoint__section {
     background:
-      url('../../assets/images/girl_student.png');
+      url('../../assets/images/college-herosec.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 230px 0;
+    padding: 200px 0;
   }
 
   .career__section {
@@ -30,4 +30,15 @@
     background-repeat: no-repeat;
     padding: 230px 0;
     height: 90px;
+  }
+
+  .uni__section {
+    background:
+      url('../../assets/images/unipage.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 200px 0;
+      margin-top: 0;
+      
   }

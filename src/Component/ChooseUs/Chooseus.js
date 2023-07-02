@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import chooseImg from "../../assets/images/chooseus.jpg";
 import "./choose-us.css";
+import { FaPlay} from "react-icons/fa";
+import 'font-awesome/css/font-awesome.min.css'
 
 import ReactPlayer from "react-player";
 
@@ -42,7 +44,7 @@ const ChooseUs = () => {
               {!showVideo && (
                 <span className="play__icon">
                   <i
-                    class="ri-play-circle-line"
+                    class="fa-map-marker "
                     onClick={() => setShowVideo(!showVideo)}
                   ></i>
                 </span>

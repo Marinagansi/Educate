@@ -27,8 +27,8 @@ const HeroSection = () => {
             </div>
           </Col>
 
-          <Col lg="6" md="6">
-            <img src={heroImg} alt="" className="w-110 hero__img" />
+          <Col lg="6" md="6" style={{ "justify-content": "left !important"}}>
+            <img src={heroImg} alt="" className="w-110 hero__img" style={{'margin-left':'100px','height':'95% '}} />
           </Col>
         </Row>
       </Container>
