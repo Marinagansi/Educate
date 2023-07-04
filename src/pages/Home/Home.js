@@ -19,9 +19,10 @@ const Home =() =>{
     <Navbarmenu/>
     <HeroSection/>
     <AboutUs/>
+    <Mission />
     <Event/>
     <ChooseUs />
-    <Mission />
+ 
      <Footer /> 
     </Fragment>
      

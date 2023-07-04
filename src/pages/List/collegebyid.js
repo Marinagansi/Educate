@@ -1,4 +1,5 @@
 import "./list.css";
+import React, { useState } from "react";
 import Navbar from "../../Component/Navbarmenu/Navbar";
 import Testimonial from "../../Component/testimonial/Testmonial";
 import { Container, Row, Col } from "reactstrap";
@@ -6,6 +7,7 @@ import CareerPage from "../../Component/career/Career";
 
 
 const collegebyid = ({uni}) => {
+  
 
   return (
     <div>

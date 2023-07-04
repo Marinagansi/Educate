@@ -5,3 +5,9 @@
   .single__feature h6 {
     font-weight: 600;
   }
+  .single__feature .img{
+     width: 3rem;
+    height: 9rem; 
+   
+    
+  }

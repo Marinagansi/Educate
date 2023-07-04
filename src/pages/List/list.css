@@ -108,3 +108,8 @@
     font-size: 15px;
     color: black;
   }
+
+  .activeSection {
+    background-color: #ff0000; /* Specify your desired background color */
+    color: #ffffff; /* Specify the text color for better visibility */
+  }
