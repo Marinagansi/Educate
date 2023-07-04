@@ -18,4 +18,13 @@
     text-decoration: none;
     color: #0a2b1e;
     font-weight: 500;
+
   }
+  .header2{
+    text-decoration: none;
+  }
+  .fheader{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'poppins', sans-serif;
+    }

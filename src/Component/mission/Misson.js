@@ -38,7 +38,7 @@ const Features = () => {
           {FeatureData.map((item, index) => (
             <Col lg="4" md="6" key={index}>
               <div className="single__feature text-center px-4">
-              <img src={item.img} alt="" className="w-100 img" />
+              <img src={item.img} alt="" className="img" />
                 <h2 className="mb-3">
                   <i class={item.icon}></i>
                 </h2>

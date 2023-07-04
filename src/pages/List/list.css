@@ -39,10 +39,11 @@
     font-size: 12px;
   }
   
-  .lsItem>input{
+  .lsItem>form input{
     height: 30px;
-    border: none;
+    /* border: none; */
     padding: 5px;
+    width:15rem
   }
   .lsItem>span{
     height: 30px;

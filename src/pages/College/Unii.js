@@ -7,13 +7,18 @@ import UniSection from "../../Component/commonsection/Unipage.js";
 import sideSearchBar from "../../Component/Universities/sidesearchbar.js";
 import Helmet from "../../Component/Helmet";
 import React, { useState } from "react";
+import Footer from "../../Component/Footer/footer.js";
 
 const Uni = ({ universities, setUniversity }) => {
   const [val, setVal] = useState("");
   const [search, setSearch] = useState("");
   const [searchloca, setSearchloca] = useState("");
+  const [searchtype ,setSearchtype] = useState("");
+
   const [originalUni, setOriginalUni] = useState([]);
-  const data = ["Java", "JavaScript", "React js", "Python", "C", "C++"];
+  const data = ["MBA", "Computer Science", "Engineer", "Architecture", "Fashion", "IT"];
+  const location = ["Uk","kathmandu"];
+  const type = ["Uk","TU","KU","PU"];
 
   if (originalUni.length === 0 && universities.length > 0) {
     setOriginalUni(universities); // Initialize originalUni with the initial value of uni
@@ -55,7 +60,19 @@ const Uni = ({ universities, setUniversity }) => {
       );
       setUniversity(search_result);
     } else {
-      setUniversity(universities);
+      setUniversity(originalUni);
+    }
+  };
+
+  const _typeSearch = (e) => {
+    setSearchloca(e.target.value);
+    if (e.target.value !== "") {
+      let search_result = universities.filter((item) =>
+        item.type.toLowerCase().includes(searchtype.toLowerCase())
+      );
+      setUniversity(search_result);
+    } else {
+      setUniversity(originalUni);
     }
   };
   return (
@@ -75,14 +92,6 @@ const Uni = ({ universities, setUniversity }) => {
               <div className="lsItem">
                 <div className="lsItem">
                   <label>Majors</label>
-                  {/* <sideSearchBar
-                    data={data}
-                    value={search}
-                    clearSearch={handleClearSearch}
-                    formSubmit={handleSearchBar}
-                    handleSearchKey={_majorSearch}
-                  /> */}
-                
 
                   <form onsubmit={(e) => handleSearchBar(e)}>
                     <input
@@ -90,28 +99,56 @@ const Uni = ({ universities, setUniversity }) => {
                       value={search}
                       type="text"
                       onChange={(e) => _majorSearch(e)}
-                      placeholder="Search"
+                      placeholder="Search by major"
                     />
-                    <datalist id="data" style={{ backgroundColor: "white" }}>
+                    <datalist id="data" style={{ "backgroundColor": "white" }}>
                       {data.map((op) => (
                         <option>{op}</option>
                       ))}
                     </datalist>
 
-                    <h1>{val}</h1>
+                    {/* <h1>{val}</h1> */}
                   </form>
                 </div>
                 <div className="lsItem">
                   <label>Location</label>
-                  <input
-                    type="text"
-                    value={searchloca}
-                    onChange={(e) => _locationSearch(e)}
-                  />
+                  <form onsubmit={(e) => handleSearchBar(e)}>
+                    <input
+                      list="location"
+                      value={searchloca}
+                      type="text"
+                      onChange={(e) =>_locationSearch(e)}
+                      placeholder="Search by location"
+                    />
+                    <datalist id="location" style={{ "backgroundColor": "white" }}>
+                      {location.map((op) => (
+                        <option>{op}</option>
+                      ))}
+                    </datalist>
+
+                    {/* <h1>{val}</h1> */}
+                  </form>
                 </div>
                 <div className="lsItem">
                   <label>Type</label>
-                  <input type="text" />
+                  <form onsubmit={(e) => handleSearchBar(e)}>
+                    <input
+                      list="type"
+                      value={searchtype}
+                      type="text"
+                      onChange={(e) => _typeSearch(e)}
+                      placeholder="Search by type"
+                    />
+                    <datalist id="type" style={{ "backgroundColor": "white" }}>
+                      {type.map((op) => (
+                        <option>{op}</option>
+                      ))}
+                    </datalist>
+
+                    {/* <h1>{val}</h1> */}
+                  </form>
+                  
+                  {/* <input type="text" /> */}
                 </div>
               </div>
             </div>
@@ -124,6 +161,7 @@ const Uni = ({ universities, setUniversity }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

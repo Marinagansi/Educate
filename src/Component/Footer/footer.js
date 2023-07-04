@@ -51,7 +51,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Col lg="3" md="6" className="mb-4">
-            <h2 className=" d-flex align-items-center gap-1">
+            <h2 className=" d-flex align-items-center gap-1header2 ">
               <i class="ri-pantone-line"></i> Learners.
             </h2>
 
@@ -88,7 +88,7 @@ const Footer = () => {
           </Col>
 
           <Col lg="3" md="6" className="mb-4">
-            <h6 className="fw-bold">Explore</h6>
+            <h6 className="fheader">Explore</h6>
             <ListGroup className="link__list">
               {footerQuickLinks.map((item, index) => (
                 <ListGroupItem key={index} className="border-0 ps-0 link__item">
@@ -100,7 +100,7 @@ const Footer = () => {
           </Col>
 
           <Col lg="3" md="6" className="mb-4">
-            <h6 className="fw-bold">Information</h6>
+            <h6 className="fheader">Information</h6>
             <ListGroup className="link__list">
               {footerInfoLinks.map((item, index) => (
                 <ListGroupItem key={index} className="border-0 ps-0 link__item">
@@ -112,11 +112,11 @@ const Footer = () => {
           </Col>
 
           <Col lg="3" md="6">
-            <h6 className="fw-bold">Get in Touch</h6>
+            <h6 className="fheader">Get in Touch</h6>
 
             <p>Address:Kathmandu </p>
             <p> Phone:  0123456789 </p>
-            <p>Email: example@gmail.com</p>
+            <p>Email: educate@gmail.com</p>
           </Col>
         </Row>
       </Container>

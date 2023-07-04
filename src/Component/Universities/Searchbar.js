@@ -71,6 +71,7 @@ export const SearchBar = ({ uni,setuni }) => {
       />    {search !== ''  && <FaCross onClick={handleClearSearch} />}
       <button>Go</button> */}
     </div>
+
     
     </>
   
