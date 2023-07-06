@@ -5,10 +5,11 @@ import Home from "./pages/Home/Home";
 import Uni from "./pages/College/Unii";
 import Signup from "./registration/Signup";
 import College from "./pages/List/college";
-import Collegebyid from "./pages/List/collegebyid";
+import Collegebyid from "./pages/List/Collegebyid";
 // import Career from "./pages/careerpage/careerpage";
 import CHome from "./pages/careerpage/careerpage1";
 import Careers from "./pages/careerpage/career/index";
+import Users from './pages/Admin/User';
 
 function App() {
   const [universities, setUniversity] = useState([])
@@ -27,6 +28,8 @@ function App() {
         <Route path="/Career" element={<CHome />} />
         <Route path="/career/:id" element={<Careers />} />
         
+        {/* admin page */}
+        <Route exact path="/users" element={<Users/>} />
 
       </Routes>
     </>

@@ -44,7 +44,7 @@ const Signup=()=> {
              <Components.SignUpContainer signinIn={signIn}>
                  <Components.Form>
                      <Components.Title style={{color:'black'}}>Create Account</Components.Title>
-                     <Components.Inputs type='text' placeholder='Name'  value={name}
+                     <Components.Inputs type='text' placeholder='Full Name'  value={name}
                      onChange={(e) => setName(e.target.value)} required
                      />
                      <Components.Inputs type='email' placeholder='Email' value={email}

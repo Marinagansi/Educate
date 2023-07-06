@@ -114,3 +114,8 @@
     background-color: #ff0000; /* Specify your desired background color */
     color: #ffffff; /* Specify the text color for better visibility */
   }
+
+  
+  .active-section {
+    background-color: #a6a0a0; /* Replace with your desired background color */
+  }

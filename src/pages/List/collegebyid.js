@@ -1,13 +1,75 @@
 import "./list.css";
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import Navbar from "../../Component/Navbarmenu/Navbar";
 import Testimonial from "../../Component/testimonial/Testmonial";
 import { Container, Row, Col } from "reactstrap";
 import CareerPage from "../../Component/career/Career";
 
 
-const collegebyid = ({uni}) => {
-  
+const Collegebyid = ({uni}) => {
+
+  const [activeSection, setActiveSection] = useState("");
+// Get all the buttons
+const buttons = document.querySelectorAll('.sidebuttton');
+
+// Add click event listener to each button
+buttons.forEach((button) => {
+  button.addEventListener('click', function () {
+    // Remove the active class from all buttons
+    buttons.forEach((btn) => {
+      btn.classList.remove('active');
+      btn.querySelector('a').classList.remove('active-link');
+    });
+
+    // Add the active class to the clicked button
+    this.classList.add('active');
+    this.querySelector('a').classList.add('active-link');
+
+    // Set the active section based on the href attribute
+    const href = this.querySelector('a').getAttribute('href');
+    const sectionId = href.substring(1);
+    setActiveSection(sectionId);
+  });
+});
+
+
+
+// Highlight the button based on the current section
+window.addEventListener('scroll', function() {
+  // Get the current scroll position
+  const scrollPosition = window.scrollY;
+
+  // Get all the section containers
+  const sections = document.querySelectorAll('.searchItem');
+
+  // Loop through each section and check if it is in the viewport
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      // Remove the active class from all buttons
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+        btn.querySelector('a').classList.remove('active-link');
+      });
+
+      // Get the button corresponding to the current section
+      const button = document.querySelector(`.sidebuttton a[href="#${section.id}"]`);
+      
+      if (button) {
+        // Add the active class to the corresponding button
+        button.parentElement.classList.add('active');
+        button.classList.add('active-link');
+      }
+    }
+  });
+});
+
+
+
+
 
   return (
     <div>
@@ -24,7 +86,7 @@ const collegebyid = ({uni}) => {
           <div className="listSearch">
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
-              <button className="sidebuttton"><a href='#overview'>Overview</a></button>
+              <button className="sidebuttton active"><a href='#overview'>Overview</a></button>
               <button className="sidebuttton"><a href='#location'>Location</a></button>
               <button className="sidebuttton"><a href='#contact'> Contact</a></button>
               <button className="sidebuttton"> <a href='#Major'>Major</a></button>
@@ -35,7 +97,7 @@ const collegebyid = ({uni}) => {
           </div>
           <div className="listResult">
          
-            <div className="searchItem">
+          <div id="overview-section" className={`searchItem ${activeSection === 'overview' ? 'active-section' : ''}`}>
             <div className="siDesc">
               <h1 className="siTitle " id="overview">overview</h1>
               <span className="siDistance">{uni.overview}</span>
@@ -44,7 +106,7 @@ const collegebyid = ({uni}) => {
             </div>
             </div>
 
-            <div className="searchItem">
+            <div  id="location-section" className={`searchItem ${activeSection === 'location' ? 'active-section' : ''}`}>
             <div className="siDesc">
               <h1 className="siTitle location" id="location">Location</h1>
               <span className="siDistance">{uni.location}</span>
@@ -52,7 +114,7 @@ const collegebyid = ({uni}) => {
             </div>
             </div>
 
-            <div className="searchItem">
+            <div  id="contact-section" className={`searchItem ${activeSection === 'contact' ? 'active-section' : ''}`}>
             <div className="siDesc">
               <h1 className="siTitle" id="contact">contact</h1>
               <span className="siDistance">{uni.phone}</span>
@@ -62,15 +124,15 @@ const collegebyid = ({uni}) => {
             </div>
            
 
-            <div className="searchItem">
+            <div  id="Major-section" className={`searchItem ${activeSection === 'Major' ? 'active-section' : ''}`}>
             <div className="siDesc">
-              <h1 className="siTitle" id="major">Major</h1>
+              <h1 className="siTitle" id="Major">Major</h1>
               <span className="siDistance">{uni.major}</span>
                
             
             </div>
             </div>
-            <div className="searchItem">
+            <div  id="admission-section" className={`searchItem ${activeSection === 'admission' ? 'active-section' : ''}`}>
             <div className="siDesc">
               <h1 className="siTitle " id="admission">Admission</h1>
               
@@ -78,7 +140,7 @@ const collegebyid = ({uni}) => {
           
             </div>
             </div>
-             <div className="searchItem">
+             <div  id="tution-section" className={`searchItem ${activeSection === 'tuition' ? 'active-section' : ''}`}>
             <div className="siDesc">
               <h1 className="siTitle "id="tuition">Tution and fees</h1>
 
@@ -123,4 +185,4 @@ const collegebyid = ({uni}) => {
   );
 };
 
-export default collegebyid;
+export default Collegebyid;
