@@ -28,9 +28,11 @@ function SideBar ({ menu }) {
         <nav className='sidebar'>
             <div className='sidebar-container'>
                 <div className='sidebar-logo-container'>
-                    <img
+                    {/* <img
                         src={logo}
-                        alt="logo" />
+                        alt="logo" /> */}
+                        <h1>EDUCATE</h1>
+                        <h2>welcome</h2>
                         
                 </div>
 

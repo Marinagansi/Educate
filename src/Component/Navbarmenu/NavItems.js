@@ -19,8 +19,8 @@ export const navItems = [
     },
     {
       id: 4,
-      title: "Contact us",
-      path: "/contactus",
+      title: "Scholarship",
+      path: "/Scholarship",
       cName: "nav-item",
     },
   ];

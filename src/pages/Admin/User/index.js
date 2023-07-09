@@ -61,11 +61,12 @@ function User () {
         <SideBar menu={sidebar_menu} />
         <div className='dashboard-content'>
             <DashboardHeader
-                btnText="New Order" />
+                btnText="Add User" 
+                />
 
             <div className='dashboard-content-container'>
                 <div className='dashboard-content-header'>
-                    <h2>Orders List</h2>
+                    <h2>Users</h2>
                     <div className='dashboard-content-search'>
                         <input
                             type='text'

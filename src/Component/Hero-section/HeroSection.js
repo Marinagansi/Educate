@@ -2,8 +2,17 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import heroImg from "../../assets/images/educatelogo.png";
 import "./herosection.css";
-
+import { Link , useNavigate} from 'react-router-dom';
 const HeroSection = () => {
+
+  const navigate = useNavigate();
+  const joinNow= (e) => {
+    navigate("/uni");
+  }
+
+  const StartNow= (e) => {
+    navigate("/signup");
+  }
 
   return (
     <section>
@@ -22,13 +31,13 @@ const HeroSection = () => {
             </div>
             <div className="search">
               {/* <input type="text" placeholder="Search" /> */}
-              <button className="btn" style={{width:240}}>Join Now</button>
-              <button className="btn"style={{width:120}}>Start</button>
+              <button className="btn" style={{width:240}} onClick={joinNow}>Join Now</button>
+              <button className="btn"style={{width:120}} onClick={StartNow}>Start</button>
             </div>
           </Col>
 
           <Col lg="6" md="6" style={{ "justify-content": "left !important"}}>
-            <img src={heroImg} alt="" className="w-110 hero__img" style={{'margin-left':'100px','height':'95% '}} />
+            <img src={heroImg} alt="" className="w-110 hero__img" style={{'margin-left':'180px','height':'90% '}} />
           </Col>
         </Row>
       </Container>

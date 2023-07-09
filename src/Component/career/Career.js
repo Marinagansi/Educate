@@ -63,11 +63,11 @@ const career = () => {
           <div className="single__member">
             <div className="single__member__img">
               <img src={item.imgUrl} alt="" className="w-100" />
-              <div className="single__member__social">
+              {/* <div className="single__member__social">
                 
                 
                 
-              </div>
+              </div> */}
             </div>
 
             {/* <h6 className="text-center mb-0 mt-3 header" >{item.name}</h6> */}

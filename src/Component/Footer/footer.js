@@ -114,9 +114,9 @@ const Footer = () => {
           <Col lg="3" md="6">
             <h6 className="fheader">Get in Touch</h6>
 
-            <p>Address:Kathmandu </p>
-            <p> Phone:  0123456789 </p>
-            <p>Email: educate@gmail.com</p>
+            <p className="p">Address:Kathmandu </p>
+            <p className="p"> Phone:  0123456789 </p>
+            <p className="p">Email: educate@gmail.com</p>
           </Col>
         </Row>
       </Container>

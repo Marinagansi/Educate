@@ -5,11 +5,15 @@ import Navbar from "../../Component/Navbarmenu/Navbar";
 import Testimonial from "../../Component/testimonial/Testmonial";
 import { Container, Row, Col } from "reactstrap";
 import CareerPage from "../../Component/career/Career";
+import Footer from "../../Component/Footer/footer";
+import { Link , useNavigate} from 'react-router-dom';
+
 
 
 const Collegebyid = ({uni}) => {
 
   const [activeSection, setActiveSection] = useState("");
+  const navigate = useNavigate();
 // Get all the buttons
 const buttons = document.querySelectorAll('.sidebuttton');
 
@@ -68,8 +72,15 @@ window.addEventListener('scroll', function() {
 });
 
 
-
-
+const applyform = () => {
+  if (window.localStorage.getItem("token") === null) {
+    navigate("/signup");
+  }
+ else {
+//     window.location.href = "https://applicantportal.coventry.ac.uk/s/login/?ec=302&startURL=%2Fs%2F";
+window.open("https://applicantportal.coventry.ac.uk/s/login/?ec=302&startURL=%2Fs%2F", "_blank");
+ }
+}
 
   return (
     <div>
@@ -77,6 +88,9 @@ window.addEventListener('scroll', function() {
     
     
         <div className='emptyList-wrapS'>
+        <Link className='blog-goBacks' to='/uni' >
+        <span> &592#8;</span> <span>Go Back</span>
+      </Link>
       <img src={"http://localhost:3000" + uni.image} alt='empty' />
       </div>
       <h1 className="Uniheading">{uni.name}</h1>
@@ -93,7 +107,8 @@ window.addEventListener('scroll', function() {
               <button className="sidebuttton"> <a href='#admission'> Admission</a></button>
               <button className="sidebuttton"><a href='#tuition'> Tuition and fees</a></button>
             </div>
-            <button ><a href="https://apply.commonapp.org/login?ma=327&tref=3003" style={{"text-decoration":"none","color":"white"}}>Apply form</a></button>
+            <button onClick={applyform} >Apply form</button>
+            {/* <a href="https://applicantportal.coventry.ac.uk/s/login/?ec=302&startURL=%2Fs%2F" style={{"text-decoration":"none","color":"white"}}>Apply form</a>  */}
           </div>
           <div className="listResult">
          
@@ -178,7 +193,7 @@ window.addEventListener('scroll', function() {
         </Container>
           
          
-       
+       <Footer/>
       
     </div>
   

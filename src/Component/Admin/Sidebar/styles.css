@@ -6,7 +6,8 @@
     display: flex;
     justify-content: center;
     position: sticky;
-    background-image: linear-gradient(#d49a9a, #de9999, #c67b7f);
+    background-color: #4f6e93;
+    /* background-image: linear-gradient(#235391, #235, #235391); */
 }
 .sidebar-logo-container {
     display: 'flex';

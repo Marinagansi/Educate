@@ -17,6 +17,7 @@
     text-transform: uppercase;
     border: 1px solid #015C92;
     background-color: #015C92;
+    width:13%;
 }
 .dashbord-header-btn:hover {
     color: #015C92;

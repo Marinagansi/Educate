@@ -10,6 +10,7 @@ import Collegebyid from "./pages/List/Collegebyid";
 import CHome from "./pages/careerpage/careerpage1";
 import Careers from "./pages/careerpage/career/index";
 import Users from './pages/Admin/User';
+import Scholarship from "./pages/scholarshipPage/Schlarpage";
 
 function App() {
   const [universities, setUniversity] = useState([])
@@ -27,6 +28,7 @@ function App() {
         <Route path="/uni" element={<Uni  universities={universities} setUniversity={setUniversity} />} />
         <Route path="/Career" element={<CHome />} />
         <Route path="/career/:id" element={<Careers />} />
+        <Route path="/Scholarship" element={<Scholarship />} />
         
         {/* admin page */}
         <Route exact path="/users" element={<Users/>} />

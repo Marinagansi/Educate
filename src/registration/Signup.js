@@ -22,6 +22,7 @@ const Signup=()=> {
         axios.post("http://localhost:3000/users/register", user).
         then((res) => {
             console.log(res.data);
+           
             message.success("welcome your account is register successfully")
             navigate("/signup");
         }).catch((err) => {message.error(err.response.data.err)});
@@ -33,7 +34,9 @@ const Signup=()=> {
         userService.login({name,password})
         .then(response=>{
             console.log(response.data)
+            window.localStorage.setItem('token', response.data.token)
             message.success("login successful")
+            
             navigate('/')
         }).catch(err => message.error(err.response.data.err))
     }

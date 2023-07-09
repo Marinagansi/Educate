@@ -22,7 +22,6 @@ const Home =() =>{
     <Mission />
     <Event/>
     <ChooseUs />
- 
      <Footer /> 
     </Fragment>
      

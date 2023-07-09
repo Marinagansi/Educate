@@ -119,3 +119,13 @@
   .active-section {
     background-color: #a6a0a0; /* Replace with your desired background color */
   }
+  .blog-goBacks{
+    color:black;
+    text-decoration: none;
+    font-size: 0.8rem;
+    /* color: #a9a9a9; */
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: block;
+    margin-top:3 rem;
+  }

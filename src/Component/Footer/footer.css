@@ -18,6 +18,7 @@
     text-decoration: none;
     color: #0a2b1e;
     font-weight: 500;
+    font-family: 'poppins', sans-serif;
 
   }
   .header2{
@@ -27,4 +28,10 @@
     font-weight: bold;
     font-size: 20px;
     font-family: 'poppins', sans-serif;
+    }
+
+    .p{
+      text-decoration: none;
+      color: #0a2b1e;
+      font-weight: 500;
     }

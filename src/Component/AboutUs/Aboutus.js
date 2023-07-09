@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./about.css";
 import { Container, Row, Col } from "reactstrap";
 import aboutImg from "../../assets/images/aboutus.jpg";
 import CountUp from "react-countup";
 import "./about.css";
 
+import { Visible } from "react-visible";
+
 const AboutUs = () => {
+  
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const sectionPosition = document.querySelector(".about__content").offsetTop;
+      const windowHeight = window.innerHeight;
+
+      setIsVisible(scrollPosition + windowHeight > sectionPosition);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section>
       <Container>

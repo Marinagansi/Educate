@@ -29,7 +29,7 @@ export const blogList = [
     {
       id: 3,
       title: 'Online Shopping – An Alternative to Shopping in the Mall',
-      category: 'shopping',
+      category: 'Tourism',
       subCategory: ['e-commerce store', 'clothing', 'shopping store'],
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -41,7 +41,7 @@ export const blogList = [
     {
       id: 4,
       title: 'ADVENTURE IN YOU',
-      category: 'adventure',
+      category: 'Hotel Management',
       subCategory: ['adrenaline', 'stay-fit', 'lifestyle'],
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -73,7 +73,7 @@ export const blogList = [
       authorAvatar: '/assets/images/author.jpg',
       createdAt: 'June 03, 2021',
       cover:
-        '/assets/images/Purple-Combination-colors-graphic-design-predictions-1024x576-1024x576.jpg',
+        courseImg2,
     },
     {
       id: 7,
@@ -85,7 +85,7 @@ export const blogList = [
       authorName: 'John Doe',
       authorAvatar: '/assets/images/author.jpg',
       createdAt: 'June 03, 2021',
-      cover: '/assets/images/Synthwave-Postmodern.jpg',
+      cover:courseImg1,
     },
   ];
   

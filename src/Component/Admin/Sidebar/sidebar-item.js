@@ -13,6 +13,7 @@ const SideBarItem = ({ item, active }) => {
                     src={item.icon}
                     alt={`icon-${item.icon}`}
                     className='sidebar-item-icon' />
+                    {item.title}
                 <span className='sidebar-item-label'>{item.title}</span>
         </Link>
     )
