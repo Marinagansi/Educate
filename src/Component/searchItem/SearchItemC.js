@@ -12,7 +12,7 @@ const SearchItem = ({university,setUniversity}) => {
 
   // Function to get all univerities
   useEffect(()=>{
-    universities.gettalluniversity().
+    universities.gettallCollge().
     then (response=>{
       setPagination(calculateRange(response.data.data, 15));
       setUniversity(sliceData(response.data.data, page, 15));
@@ -58,7 +58,7 @@ const SearchItem = ({university,setUniversity}) => {
           </div><div className="siDetails">
             <div className="siRating"></div>
             <div className="siDetailText">
-            <Link className="siCheckButton"to={`/college/${item._id}`} style={{"text-decoration":"none","text-align":"center"}}>Apply now</Link>
+            <Link className="siCheckButton"to={`/uni/${item._id}`} style={{"text-decoration":"none","text-align":"center"}}>Apply now</Link>
              
             </div>
           </div>

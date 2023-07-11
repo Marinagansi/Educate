@@ -94,12 +94,13 @@ const Uni = ({ universities, setUniversity }) => {
                   <label>Majors</label>
 
                   <form onsubmit={(e) => handleSearchBar(e)}>
+
                     <input
                       list="data"
                       value={search}
                       type="text"
                       onChange={(e) => _majorSearch(e)}
-                      placeholder="Search by major"
+                      // placeholder="Search by major"
                     />
                     <datalist id="data" style={{ "backgroundColor": "white" }}>
                       {data.map((op) => (
@@ -113,12 +114,13 @@ const Uni = ({ universities, setUniversity }) => {
                 <div className="lsItem">
                   <label>Location</label>
                   <form onsubmit={(e) => handleSearchBar(e)}>
+                  
                     <input
                       list="location"
                       value={searchloca}
                       type="text"
                       onChange={(e) =>_locationSearch(e)}
-                      placeholder="Search by location"
+                      // placeholder="Search by location"
                     />
                     <datalist id="location" style={{ "backgroundColor": "white" }}>
                       {location.map((op) => (
@@ -137,7 +139,7 @@ const Uni = ({ universities, setUniversity }) => {
                       value={searchtype}
                       type="text"
                       onChange={(e) => _typeSearch(e)}
-                      placeholder="Search by type"
+                      // placeholder="Search by type"
                     />
                     <datalist id="type" style={{ "backgroundColor": "white" }}>
                       {type.map((op) => (

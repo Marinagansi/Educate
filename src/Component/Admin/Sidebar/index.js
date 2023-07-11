@@ -23,6 +23,10 @@ function SideBar ({ menu }) {
     const __navigate = (id) => {
         setActive(id);
     }
+    const handlelogout=()=>{
+        localStorage.clear();
+        window.location.href="/";
+    }
 
     return(
         <nav className='sidebar'>
@@ -52,7 +56,8 @@ function SideBar ({ menu }) {
                         <img 
                             src={LogoutIcon}
                             alt='icon-logout'
-                            className='sidebar-item-icon' />
+                            className='sidebar-item-icon' 
+                            onClick={handlelogout}/>
                     </div>
                 </div>
             </div>

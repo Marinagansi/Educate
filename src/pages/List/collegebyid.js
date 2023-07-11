@@ -124,7 +124,7 @@ window.open("https://applicantportal.coventry.ac.uk/s/login/?ec=302&startURL=%2F
             <div  id="location-section" className={`searchItem ${activeSection === 'location' ? 'active-section' : ''}`}>
             <div className="siDesc">
               <h1 className="siTitle location" id="location">Location</h1>
-              <span className="siDistance">{uni.location}</span>
+              <span className="siDistance"><i class="fa-sharp fa-solid fa-location-dot"></i>{ uni.location}</span>
               
             </div>
             </div>
@@ -132,8 +132,8 @@ window.open("https://applicantportal.coventry.ac.uk/s/login/?ec=302&startURL=%2F
             <div  id="contact-section" className={`searchItem ${activeSection === 'contact' ? 'active-section' : ''}`}>
             <div className="siDesc">
               <h1 className="siTitle" id="contact">contact</h1>
-              <span className="siDistance">{uni.phone}</span>
-               <span className="siSubtitle">{uni.types}</span>
+              <span className="siDistance"><i class="fa-sharp fa-solid fa-phone"></i>{ uni.phone}</span>
+               <span className="siSubtitle"><i class="fa-sharp fa-solid fa-envelope"></i>{ uni.types}</span>
               
             </div>
             </div>
@@ -157,7 +157,7 @@ window.open("https://applicantportal.coventry.ac.uk/s/login/?ec=302&startURL=%2F
             </div>
              <div  id="tution-section" className={`searchItem ${activeSection === 'tuition' ? 'active-section' : ''}`}>
             <div className="siDesc">
-              <h1 className="siTitle "id="tuition">Tution and fees</h1>
+              <h1 className="siTitle"id="tuition"><i className="fa-solid fa-address-book"></i>Tution and fees</h1>
 
               <span className="siDistance">{uni.fees}</span>
               {/* <div className="siRating">kk</div> */}

@@ -20,7 +20,7 @@ export const navItems = [
     {
       id: 4,
       title: "Scholarship",
-      path: "/Scholarship",
+      path: "/Scholarships",
       cName: "nav-item",
     },
   ];

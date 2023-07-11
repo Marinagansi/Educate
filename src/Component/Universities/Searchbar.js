@@ -51,7 +51,7 @@ export const SearchBar = ({ uni,setuni }) => {
   return (
     <>
       <div className="input-wrapper">
-      <FaSearch id="search-icon" />
+      <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
       <form onSubmit={handleSearchBar}>
       <input 
         type='text'

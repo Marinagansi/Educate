@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import DashboardHeader from '../../../components/Admin/DashboardHeader';
+import DashboardHeader from '../../../Component/Admin/DashboardHeader';
 import {calculateRange, sliceData} from '../../../utils/table-pagination';
 import '../styles.css';
 import DoneIcon from '../../../assets/icons/done.svg';
@@ -7,19 +7,19 @@ import CancelIcon from '../../../assets/icons/cancel.svg';
 import RefundedIcon from '../../../assets/icons/refunded.svg';
 import productbook from './Productservice';
 
-import SideBar from '../../../components/Admin/Sidebar';
-import sidebar_menu from '../../../constants/sidebar-menu';
+import SideBar from '../../../Component/Admin/Sidebar';
+import sidebar_menu from '../../../Component/Admin/constants/sidebar-menu';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
  
-function Products () {
+function Unis () {
     const [search, setSearch] = useState('');
     const [product, setproduct] = useState([]);
     const [page, setPage] = useState(1);
     const [pagination, setPagination] = useState([]);
 
     useEffect(() => {
-        productbook.getAllproduct().
+        productbook.getAlluni().
         then(response=>{
             setPagination(calculateRange(response.data.data, 5));
          setproduct(sliceData(response.data.data, page, 5));
@@ -47,7 +47,7 @@ function Products () {
     // Change Page 
     const __handleChangePage = (new_page) => {
         setPage(new_page);
-        productbook.getAllproduct().then(response=>{
+        productbook.getAlluni().then(response=>{
             setPagination(calculateRange(response.data.data, 5));
          setproduct(sliceData(response.data.data, page, 5));
             //setproduct(response.data.data);
@@ -58,7 +58,7 @@ function Products () {
 
     const _handleDelete=async(idBooks)=>{
      console.log(idBooks);
-     await productbook.deleteproduct(idBooks);
+     await productbook.deleteuni(idBooks);
      setproduct(product.filter(product=>product._id!==idBooks));
     }
 
@@ -72,7 +72,7 @@ function Products () {
 
             <div className='dashboard-content-container'>
                 <div className='dashboard-content-header'>
-                    <h2>productment List</h2>
+                    <h2>Univisersity List</h2>
                     <div className='dashboard-content-search'>
                         <input
                             type='text'
@@ -159,4 +159,4 @@ function Products () {
     )
 }
 
-export default Products;
+export default Unis;

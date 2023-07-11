@@ -10,7 +10,7 @@ function Button() {
   const logout = () => {
     window.localStorage.removeItem("token");
       navigate("/signup");
-  
+    
   }
   const Button=()=>{
     if (window.localStorage.getItem("token")) {

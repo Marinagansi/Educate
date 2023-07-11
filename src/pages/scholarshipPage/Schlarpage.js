@@ -2,26 +2,30 @@ import { useState } from "react";
 import "./scholarPage.css";
 import FormInput from "../../Component/Scholarship/Forminput";
 import Navbar from "../../Component/Navbarmenu/Navbar";
+import {message} from 'antd';
+import { Link , useNavigate} from 'react-router-dom';
+import axios from "axios";
 
 const Scholarship = () => {
   const [values, setValues] = useState({
-    username: "",
+    Fullname: "",
     email: "",
     birthday: "",
-    password: "",
-    confirmPassword: "",
+    Eduaction: "",
+    letter: "",
   });
+  const navigate = useNavigate();
 
   const inputs = [
     {
       id: 1,
-      name: "Fullname",
+      name: "name",
       type: "text",
       placeholder: "Full Name",
       errorMessage:
-        "Username should be 3-16 characters and shouldn't include any special character!",
+        "Required",
       // label: "Username",
-      pattern: "^[A-Za-z0-9]{3,16}$",
+      // pattern: "^[A-Za-z0-9]{3,16}$",
       required: true,
     },
     {
@@ -42,7 +46,7 @@ const Scholarship = () => {
     },
     {
         id: 4,
-        name: "Eduaction",
+        name: "education",
         type: "text",
         placeholder: "Education SEE +2 Bachelors",
         errorMessage: "It should be a valid email address!",
@@ -51,11 +55,11 @@ const Scholarship = () => {
       },
     {
       id: 4,
-      name: "password",
-      type: "file",
+      name: "letter",
+      type: "Text",
       placeholder: "Letter",
       errorMessage:
-        "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
+        "Required",
       label: "Letter",
       // pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
       required: true,
@@ -63,7 +67,7 @@ const Scholarship = () => {
     {
       id: 5,
       name: "Documents",
-      type: "file",
+      type: "File",
       placeholder: "Documents",
       errorMessage: "Passwords don't match!",
       label: "Documents",
@@ -74,7 +78,20 @@ const Scholarship = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  };
+    const user = { ...values };
+    axios.post("http://localhost:3000/scholarship", user).
+    then((res) => {
+        console.log(res.data);
+       
+        message.success("we have received your application")
+        navigate("/success");
+    }).catch((err) => {message.error(err.response.data.err)});
+
+}
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  // };
 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -87,8 +104,8 @@ const Scholarship = () => {
       <form  classname="forms" onSubmit={handleSubmit} style={{    "background-color": "white",
       "padding": "0px 60px",
       "border-radius": "10px"}}>
-        <h1 classname="h1">Apply for scholarship</h1>
-        <p>5 students will be given scholarship</p>
+        <h1 classname="h1" style={{  "text-align":"center"}}>Apply for scholarship</h1>
+        <p style={{"fontSize":"1rem","lineHeight":"none"}}>Please Fill up the given field. If you have any queries<br/> contact to +000-6605505 </p>
         {inputs.map((input) => (
           <FormInput
             key={input.id}

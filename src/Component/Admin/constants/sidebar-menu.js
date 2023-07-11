@@ -19,8 +19,8 @@ const sidebar_menu = [
     {
         id: 3,
         icon: ShippingIcon,
-        path: '/products',
-        title: 'products',
+        path: '/adduni',
+        title: 'universities',
     },
     {
         id: 4,
