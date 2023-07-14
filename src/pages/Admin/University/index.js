@@ -56,11 +56,7 @@ function Unis () {
         // setproduct(sliceData(product, new_page, 5));
     }
 
-    const _handleDelete=async(idBooks)=>{
-     console.log(idBooks);
-     await productbook.deleteuni(idBooks);
-     setproduct(product.filter(product=>product._id!==idBooks));
-    }
+    
 
     return(
         <div className='dashboard-container'>
@@ -68,11 +64,12 @@ function Unis () {
         <div className='dashboard-content'>
            
               <Link to="/forms"> <DashboardHeader
-                btnText="New productment" /></Link>
+                btnText="Add new" /></Link>
+                <h5 style={{"fontSize":"1rem","marginLeft":"30px"}}>University details</h5>
 
             <div className='dashboard-content-container'>
                 <div className='dashboard-content-header'>
-                    <h2>Univisersity List</h2>
+                    {/* <h2>Univisersity List</h2> */}
                     <div className='dashboard-content-search'>
                         <input
                             type='text'
@@ -87,10 +84,9 @@ function Unis () {
                     <thead>
                         <th>ID</th>
                         <th>name</th>
-                        <th>description</th>
+                        <th>location</th>
                         <th>Image</th>
-                        <th>Create Time</th>
-                        <th>Edit</th>
+                       
                     </thead>
 
                     {product.length !== 0 ?
@@ -100,25 +96,10 @@ function Unis () {
                                     <td><span>{order._id}</span></td>
                                     <td><span>{order.name}</span></td>
                                     <td>
-                                        <div>
-                                            {order.status === 'Paid' ?
-                                                <img
-                                                    src={DoneIcon}
-                                                    alt='paid-icon'
-                                                    className='dashboard-content-icon' />
-                                            : order.status === 'Canceled' ?
-                                                <img
-                                                    src={CancelIcon}
-                                                    alt='canceled-icon'
-                                                    className='dashboard-content-icon' />
-                                            : order.status === 'Refunded' ?
-                                                <img
-                                                    src={RefundedIcon}
-                                                    alt='refunded-icon'
-                                                    className='dashboard-content-icon' />
-                                            : null}
-                                            <span>{order.description}</span>
-                                        </div>
+                                        
+                                           
+                                            <span>{order.location}</span>
+                                        
                                     </td>
                                     <td>
                                         <div>
@@ -126,11 +107,10 @@ function Unis () {
                                                 src={"http://localhost:3000" + order.image}
                                                 className='dashboard-content-dress'
                                                />
-                                            <span>{order.fname} {order.lname}</span>
+                                          
                                         </div>
                                     </td>
-                                    <td><span>{order.createdAt}</span></td>
-                                    <td><button onClick={() => _handleDelete(order._id)}>Delete</button></td>
+                                   
                                 </tr>
                             ))}
                         </tbody>

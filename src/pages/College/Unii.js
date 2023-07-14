@@ -17,7 +17,7 @@ const Uni = ({ universities, setUniversity }) => {
 
   const [originalUni, setOriginalUni] = useState([]);
   const data = ["MBA", "Computer Science", "Engineer", "Architecture", "Fashion", "IT"];
-  const location = ["Uk","kathmandu"];
+  const location = ["lalitpur","kathmandu","Bhaktapur"];
   const type = ["Uk","TU","KU","PU"];
 
   if (originalUni.length === 0 && universities.length > 0) {
@@ -131,7 +131,7 @@ const Uni = ({ universities, setUniversity }) => {
                     {/* <h1>{val}</h1> */}
                   </form>
                 </div>
-                <div className="lsItem">
+                {/* <div className="lsItem">
                   <label>Type</label>
                   <form onsubmit={(e) => handleSearchBar(e)}>
                     <input
@@ -147,11 +147,11 @@ const Uni = ({ universities, setUniversity }) => {
                       ))}
                     </datalist>
 
-                    {/* <h1>{val}</h1> */}
+                    
                   </form>
                   
-                  {/* <input type="text" /> */}
-                </div>
+                 
+                </div> */}
               </div>
             </div>
             <div className="listResult">

@@ -32,7 +32,7 @@ const HeroSection = () => {
             <div className="search">
               {/* <input type="text" placeholder="Search" /> */}
               <button className="btn" style={{width:240}} onClick={joinNow}>Join Now</button>
-              <button className="btn"style={{width:120}} onClick={StartNow}>Start</button>
+              {/* <button className="btn"style={{width:120}} onClick={StartNow}>Start</button> */}
             </div>
           </Col>
 

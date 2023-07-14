@@ -7,6 +7,7 @@ import axios from "axios";
 import { set } from "date-fns";
 import {message} from 'antd';
 import userService from "../service/userService";
+import Navbar from "../Component/Navbarmenu/Navbar";
 
 const Signup=()=> {
     const [name, setName] = useState("");
@@ -52,7 +53,10 @@ const Signup=()=> {
     }
 
      return(
+        <>
+        <Navbar/>
         <Components.SignupBody>
+          
          <Components.Container>
              <Components.SignUpContainer signinIn={signIn}>
                  <Components.Form>
@@ -110,6 +114,7 @@ const Signup=()=> {
 
          </Components.Container>
          </Components.SignupBody>
+         </>
      )
 }
 

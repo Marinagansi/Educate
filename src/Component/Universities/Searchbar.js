@@ -55,7 +55,7 @@ export const SearchBar = ({ uni,setuni }) => {
       <form onSubmit={handleSearchBar}>
       <input 
         type='text'
-        placeholder='Search By College Name' 
+        placeholder='Search By Name' 
         value={search}
         onChange={_handleSearch}
       />

@@ -10,39 +10,36 @@ const footerQuickLinks = [
   },
   {
     display: "About US",
-    url: "#",
+    url: "#about",
   },
 
   {
-    display: "Courses",
-    url: "#",
+    display: "Career",
+    url: "#event",
   },
 
-  {
-    display: "Blog",
-    url: "#",
-  },
+  
 ];
 
 const footerInfoLinks = [
   {
-    display: "Privacy Policy",
-    url: "#",
+    display: "Scholarship",
+    url: "Scholarships",
   },
-  {
-    display: "Membership",
-    url: "#",
-  },
+  // {
+  //   display: "Membership",
+  //   url: "#",
+  // },
 
-  {
-    display: "Purchases Guide",
-    url: "#",
-  },
+  // {
+  //   display: "Purchases Guide",
+  //   url: "#",
+  // },
 
-  {
-    display: "Terms of Service",
-    url: "#",
-  },
+  // {
+  //   display: "Terms of Service",
+  //   url: "#",
+  // },
 ];
 
 const Footer = () => {
@@ -56,7 +53,7 @@ const Footer = () => {
             </h2>
 
             <div className="follows">
-              <p className="mb-0">Follow us on social media</p>
+              {/* <p className="mb-0">Follow us on social media</p> */}
               <span>
                 {" "}
                 <a href="facebook.com">

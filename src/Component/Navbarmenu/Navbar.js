@@ -19,7 +19,8 @@ function Navbar() {
     <>
       <nav className="navbar">
         <Link to="/" className="navbar-logo">
-          Educate.
+      
+          <i class="fa-sharp fa-solid fa-graduation-cap"></i> Educate.
           {/* <Icons.FaTree /> */}
         </Link>
         <ul className={state.clicked ? "nav-items active " :"nav-items"}  ref={menuRef} onClick={menuToggle}>

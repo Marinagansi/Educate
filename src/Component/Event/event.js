@@ -42,7 +42,7 @@ const Events = () => {
         <Row>
           <Col lg="12" className="mb-5">
             <div className="course__top d-flex justify-content-between align-items-center">
-              <div className="course__top__left w-50">
+              <div className="course__top__left w-50" id="event">  
                 <h2>Our Upcoming Events</h2>
                 <p>
                 we will provide you only interesting content, which you will like very much. We hope you enjoy our events as much as we enjoy offering them to you

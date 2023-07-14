@@ -8,7 +8,9 @@ export const SignupBody = styled.div`
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   height: 100vh;
-  margin: -20px 0 50px;
+  margin: -20px 0 50px ;
+  margin-top: 7px;
+  
 `;
 
 

@@ -43,10 +43,8 @@ const ChooseUs = () => {
 
               {!showVideo && (
                 <span className="play__icon">
-                  <i
-                    class="fa-map-marker "
-                    onClick={() => setShowVideo(!showVideo)}
-                  ></i>
+                  <i class="fa-sharp fa-solid fa-circle-play"    onClick={() => setShowVideo(!showVideo)}></i>
+                 
                 </span>
               )}
             </div>

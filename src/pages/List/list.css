@@ -20,6 +20,7 @@
     position: sticky;
     top: 10px;
     height: max-content;
+    border:2px solid #0071c2;
   }
   
   .lsTitle{
@@ -117,7 +118,7 @@
 
   
   .active-section {
-    background-color: #a6a0a0; /* Replace with your desired background color */
+    background-color: rgba(149, 185, 227, 0.664); /* Replace with your desired background color */
   }
   .blog-goBacks{
     color:black;

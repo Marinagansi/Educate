@@ -18,6 +18,7 @@ function Forms() {
   const [fees, setfees] = useState("");
   const [major, setmajor] = useState("");
   const [admission, setadmission] = useState("");
+  const [link, setlink] = useState("");
   const [uni, setimage] = useState("");
 
   const Navigate = useNavigate();
@@ -35,6 +36,7 @@ function Forms() {
     formdata.append("fees",fees);
     formdata.append("major", major);
     formdata.append("admission", admission);
+    formdata.append("link", link);
     productService.adduni(formdata).then((response) => {
       console.log(response.data);
       message.success("Your product has been added");
@@ -49,7 +51,8 @@ function Forms() {
       <div className="dashboard-content">
         <Link to="/forms">
           {" "}
-          <DashboardHeader btnText="New productment" />
+          <DashboardHeader btnText="Add College" />
+        
         </Link>
 
         <div className="dashboard-content-container uniform">
@@ -137,9 +140,17 @@ function Forms() {
                <input
                 className="input"
                 type="text"
-                placeholder="form link"
+                placeholder="admission"
                 value={admission}
                 onChange={(e) => setadmission(e.target.value)}
+                required
+              />
+               <input
+                className="input"
+                type="text"
+                placeholder="form link"
+                value={link}
+                onChange={(e) => setlink(e.target.value)}
                 required
               />
             </div>

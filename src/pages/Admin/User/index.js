@@ -60,13 +60,13 @@ function User () {
         <div className='dashboard-container'>
         <SideBar menu={sidebar_menu} />
         <div className='dashboard-content'>
-            <DashboardHeader
-                btnText="Add User" 
-                />
+        <DashboardHeader
+                btnText="n" />
+                <h5 style={{"fontSize":"1rem","marginLeft":"30px"}}>Users details</h5>
 
             <div className='dashboard-content-container'>
                 <div className='dashboard-content-header'>
-                    <h2>Users</h2>
+                    {/* <h2>Users</h2> */}
                     <div className='dashboard-content-search'>
                         <input
                             type='text'
@@ -84,8 +84,8 @@ function User () {
                       
                        
                         <th>Full Name</th>
-                        <th>Username</th>
-                        <th>Edit</th>
+                        {/* <th>Username</th> */}
+                        {/* <th>Edit</th> */}
                     </thead>
 
                     {orders.length !== 0 ?
@@ -105,7 +105,7 @@ function User () {
                                         </div>
                                     </td>
                                     <td><span>{order.username}</span></td>
-                                    <td><button>Delete</button></td>
+                                    
                                 </tr>
                             ))}
                         </tbody>

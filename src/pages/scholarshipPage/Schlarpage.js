@@ -5,6 +5,8 @@ import Navbar from "../../Component/Navbarmenu/Navbar";
 import {message} from 'antd';
 import { Link , useNavigate} from 'react-router-dom';
 import axios from "axios";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const Scholarship = () => {
   const [values, setValues] = useState({
@@ -15,6 +17,19 @@ const Scholarship = () => {
     letter: "",
   });
   const navigate = useNavigate();
+
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  const disabledDates = ['2023-07-01', '2023-07-05']; // Add your disabled dates here
+
+  const isDateDisabled = (date) => {
+    const formattedDate = date.toISOString().split('T')[0];
+    return disabledDates.includes(formattedDate);
+  };
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+  };
 
   const inputs = [
     {
@@ -42,7 +57,10 @@ const Scholarship = () => {
       name: "birthday",
       type: "date",
       placeholder: "Birthday",
-      // label: "Birthday",
+      label: "Birthday",
+      selected:{selectedDate},
+      onChange:{handleDateChange},
+      filterDate:{isDateDisabled}
     },
     {
         id: 4,
@@ -57,11 +75,10 @@ const Scholarship = () => {
       id: 4,
       name: "letter",
       type: "Text",
-      placeholder: "Letter",
+      placeholder: "What do you want to study?",
       errorMessage:
         "Required",
-      label: "Letter",
-      // pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
+      
       required: true,
     },
     {
@@ -105,7 +122,7 @@ const Scholarship = () => {
       "padding": "0px 60px",
       "border-radius": "10px"}}>
         <h1 classname="h1" style={{  "text-align":"center"}}>Apply for scholarship</h1>
-        <p style={{"fontSize":"1rem","lineHeight":"none"}}>Please Fill up the given field. If you have any queries<br/> contact to +000-6605505 </p>
+        <p style={{"fontSize":"1rem","lineHeight":"24px"}}>Please Fill up the given field. If you have any queries<br/> contact to +000-6605505 </p>
         {inputs.map((input) => (
           <FormInput
             key={input.id}
@@ -114,6 +131,15 @@ const Scholarship = () => {
             onChange={onChange}
           />
         ))}
+         <DatePicker
+      id="3"
+      name="birthday"
+      type="date"
+      placeholder="Birthday"
+      selected={selectedDate}
+      onChange={handleDateChange}
+      filterDate={isDateDisabled}
+    />
         <button className="sbtn">Submit</button>
       </form>
     </div>

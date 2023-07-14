@@ -31,13 +31,13 @@ const AboutUs = () => {
       <Container>
         <Row>
           <Col lg="6" md="6">
-            <div className="about__img" >
+            <div className="about__img"  >
               <img src={aboutImg} alt="" style={{ height: "350px",width:"650px" }} />
             </div>
           </Col>
 
           <Col lg="6" md="6">
-            <div className="about__content">
+            <div className="about__content" id="about">
               <h2>About Us</h2>
               <p>
                 We're dedicated to providing you the best of service provide

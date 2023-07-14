@@ -16,14 +16,14 @@ const FeatureData = [
   {
     img:vision,
     title: "vision",
-    desc: "We're working to turn our passion for service provide college information to students into a booming online website",
+    desc:"We hope to transform our enthusiasm for helping kids find college information online into a successful business.",
     icon: "ri-discuss-line",
   },
 
   {
     img:goal,
     title: "goal",
-    desc: "We're working to turn our passion for service provide college information to students into a booming online website",
+desc:"We want to turn our passion for guiding students in their search for college information online into a profitable business.",
     icon: "ri-contacts-book-line",
   },
   

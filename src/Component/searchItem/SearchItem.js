@@ -47,14 +47,14 @@ const SearchItem = ({university,setUniversity}) => {
         
           className="siImg" /><div className="siDesc">
             <h1 className="siTitles">{item.name}</h1>
-            <span className="siDistances"><FaAddressBook/> {item.location}</span>
+            <span className="siDistances"><i class="fa-sharp fa-solid fa-location-dot"></i> {item.location}</span>
           
             {/* <span className="siSubtitles">{item.fees}</span> */}
             {/* <span className="siTaxiOps">{item.admission}</span> */}
             {/* <span className="siTaxiOp">{item.major}</span> */}
 
-            <span className="siSubtitles"><FaPhone/> {item.phone}</span>
-            <span className="siSubtitles"><FaEnvelopeOpen/> {item.types}</span>
+            <span className="siSubtitles"><i class="fa-sharp fa-solid fa-phone"></i> {item.phone}</span>
+            <span className="siSubtitles"><i class="fa-sharp fa-solid fa-envelope"></i> {item.types}</span>
           </div><div className="siDetails">
             <div className="siRating"></div>
             <div className="siDetailText">

@@ -31,12 +31,12 @@ function SideBar ({ menu }) {
     return(
         <nav className='sidebar'>
             <div className='sidebar-container'>
-                <div className='sidebar-logo-container'>
-                    {/* <img
+                <div className='sidebar-logo-container' >
+                    <img 
                         src={logo}
-                        alt="logo" /> */}
-                        <h1>EDUCATE</h1>
-                        <h2>welcome</h2>
+                        alt="logo"  style={{"marginleft":"18px"}}/>
+                        {/* <h1 >EDUCATE</h1>
+                        <h2>welcome</h2> */}
                         
                 </div>
 

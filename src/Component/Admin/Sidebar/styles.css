@@ -15,7 +15,8 @@
 }
 .sidebar-logo-container img {
     width: 50%;
-    padding: 2em;
+    padding: 0.5em;
+    margin-left: 50px;
 }
 .sidebar-container {
     flex: 1;
