@@ -32,7 +32,7 @@ const Scholarship = () => {
       "padding": "0px 60px",
       "border-radius": "10px"}}>
         <h1 classname="h1">Thank you!</h1>
-        <p>Your application is received</p>
+        <p>Your application has been received</p>
     
         
         <button className="sbtn">Go Back</button>

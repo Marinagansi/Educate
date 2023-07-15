@@ -5,8 +5,8 @@ import Navbar from "../../Component/Navbarmenu/Navbar";
 import {message} from 'antd';
 import { Link , useNavigate} from 'react-router-dom';
 import axios from "axios";
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+
+
 
 const Scholarship = () => {
   const [values, setValues] = useState({
@@ -16,19 +16,25 @@ const Scholarship = () => {
     Eduaction: "",
     letter: "",
   });
+
+  const today = new Date();
+  today.setFullYear(today.getFullYear() - 18); // Subtract 18 years from the current year
+  const maxDate = today.toISOString().split('T')[0];
+  
   const navigate = useNavigate();
+  const [selectedDate, setSelectedDate] = useState('');
 
-  const [selectedDate, setSelectedDate] = useState(null);
-
-  const disabledDates = ['2023-07-01', '2023-07-05']; // Add your disabled dates here
-
-  const isDateDisabled = (date) => {
-    const formattedDate = date.toISOString().split('T')[0];
-    return disabledDates.includes(formattedDate);
+  const handleDateChange = (event) => {
+    setSelectedDate(event.target.value);
   };
 
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
+  const isYearDisabled = (year) => {
+    return year === '2022';
+  };
+
+  const isDateDisabled = (date) => {
+    const year = date.split('-')[0];
+    return isYearDisabled(year);
   };
 
   const inputs = [
@@ -52,16 +58,7 @@ const Scholarship = () => {
       // label: "Email",
       required: true,
     },
-    {
-      id: 3,
-      name: "birthday",
-      type: "date",
-      placeholder: "Birthday",
-      label: "Birthday",
-      selected:{selectedDate},
-      onChange:{handleDateChange},
-      filterDate:{isDateDisabled}
-    },
+     
     {
         id: 4,
         name: "education",
@@ -93,7 +90,7 @@ const Scholarship = () => {
     },
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmits = (e) => {
     e.preventDefault();
     const user = { ...values };
     axios.post("http://localhost:3000/scholarship", user).
@@ -106,6 +103,14 @@ const Scholarship = () => {
 
 }
 
+const handleSubmit = (e) => {
+  e.preventDefault();
+ 
+      message.success("we have received your application")
+      navigate("/success");
+ 
+
+}
   // const handleSubmit = (e) => {
   //   e.preventDefault();
   // };
@@ -122,8 +127,71 @@ const Scholarship = () => {
       "padding": "0px 60px",
       "border-radius": "10px"}}>
         <h1 classname="h1" style={{  "text-align":"center"}}>Apply for scholarship</h1>
-        <p style={{"fontSize":"1rem","lineHeight":"24px"}}>Please Fill up the given field. If you have any queries<br/> contact to +000-6605505 </p>
-        {inputs.map((input) => (
+        <p style={{"fontSize":"1rem","lineHeight":"24px"}}>Please Fill up the given field </p>
+        <FormInput
+  
+   
+    type="text"
+    placeholder="Full Name"
+    errorMessage=
+      "Field is required"
+    // label: "Username",
+    pattern="^[A-Za-z\s]{3,16}$"
+    required={true}
+    />
+     <FormInput
+  
+
+  type="email"
+  placeholder="Email"
+  errorMessage=
+    "it should be a valid email address!"
+ 
+    
+  required={true}
+  />
+        <FormInput
+      
+    
+      type="date"
+      placeholder="Birthday"
+      value={selectedDate}
+      onChange={handleDateChange}
+      label="Birth Date"
+      min="1900-01-01"
+      max={maxDate}
+      disabled={isDateDisabled(selectedDate)}
+    />
+    <FormInput
+     
+       type="text"
+       placeholder= "Education SEE +2 Bachelors"
+       errorMessage= "Field required"
+       // label: "Education",
+       required= "true"
+    />
+    <FormInput style={{height:"100px"}}
+    
+       type= "Text"
+      //  placeholder= "What do you want to study?"
+       label="why you need scholarship?"
+       errorMessage=
+         "Required"
+       
+       required= "true"
+    />
+
+<FormInput
+       label= "Require Document, Result, Certificate"
+       type= "file"
+       placeholder= "What do you want to study?"
+       errorMessage=
+         "Required"
+       
+       required= "true"
+    />
+    
+        {/* {inputs.map((input) => (
           <FormInput
             key={input.id}
             {...input}
@@ -131,15 +199,7 @@ const Scholarship = () => {
             onChange={onChange}
           />
         ))}
-         <DatePicker
-      id="3"
-      name="birthday"
-      type="date"
-      placeholder="Birthday"
-      selected={selectedDate}
-      onChange={handleDateChange}
-      filterDate={isDateDisabled}
-    />
+        */}
         <button className="sbtn">Submit</button>
       </form>
     </div>

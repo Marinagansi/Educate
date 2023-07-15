@@ -52,7 +52,7 @@ const SearchItem = ({university,setUniversity}) => {
           
 
             <span className="siSubtitles"><i class="fa-sharp fa-solid fa-phone"></i> {item.phone}</span>
-            <span className="siSubtitles"><i class="fa-sharp fa-solid fa-envelope"></i> {item.types}</span>
+            <span className="siSubtitles"><i class="fa-sharp fa-solid fa-envelope"></i> {item.email}</span>
           </div><div className="siDetails">
             <div className="siRating"></div>
             <div className="siDetailText">

@@ -22,12 +22,12 @@ const sidebar_menu = [
         path: '/adduni',
         title: 'universities',
     },
-    {
-        id: 4,
-        icon: ProductIcon,
-        path: '/scholarshiplist',
-        title: 'Scholarship',
-    }
+    // {
+    //     id: 4,
+    //     icon: ProductIcon,
+    //     path: '/scholarshiplist',
+    //     title: 'Scholarship',
+    // }
 ]
 
 export default sidebar_menu;

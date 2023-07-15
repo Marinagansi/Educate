@@ -11,6 +11,7 @@ import { Link , useNavigate} from 'react-router-dom';
 
 
 const Collegebyid = ({uni}) => {
+  console.log(uni);
 
   const [activeSection, setActiveSection] = useState("");
   const navigate = useNavigate();
@@ -72,13 +73,14 @@ window.addEventListener('scroll', function() {
 });
 
 
-const applyform = () => {
-  if (window.localStorage.getItem("token") === null) {
+const applyform = (link) => {
+console.log(link);
+ if (window.localStorage.getItem("token") === null) {
     navigate("/signup");
   }
  else {
-//     window.location.href = "https://applicantportal.coventry.ac.uk/s/login/?ec=302&startURL=%2Fs%2F";
-window.open("https://applicantportal.coventry.ac.uk/s/login/?ec=302&startURL=%2Fs%2F", "_blank");
+
+window.open(`${link}`, "_blank");
  }
 }
 
@@ -102,14 +104,14 @@ window.open("https://applicantportal.coventry.ac.uk/s/login/?ec=302&startURL=%2F
           <div className="listSearch">
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
-              <button className="sidebuttton active"><a href='#overview'>Overview</a></button>
+              <button className="sidebuttton active" ><a href='#overview'>Overview</a></button>
               <button className="sidebuttton"><a href='#location'>Location</a></button>
               <button className="sidebuttton"><a href='#contact'> Contact</a></button>
               <button className="sidebuttton"> <a href='#Major'>Major</a></button>
               <button className="sidebuttton"> <a href='#admission'> Admission</a></button>
               <button className="sidebuttton"><a href='#tuition'> Tuition and fees</a></button>
             </div>
-            <button onClick={applyform} >Apply form</button>
+            <button onClick={()=>applyform(uni.link)}>Apply form</button>
             {/* <a href="https://applicantportal.coventry.ac.uk/s/login/?ec=302&startURL=%2Fs%2F" style={{"text-decoration":"none","color":"white"}}>Apply form</a>  */}
           </div>
           <div className="listResult">
@@ -134,8 +136,8 @@ window.open("https://applicantportal.coventry.ac.uk/s/login/?ec=302&startURL=%2F
             <div  id="contact-section" className={`searchItem ${activeSection === 'contact' ? 'active-section' : ''}`}>
             <div className="siDesc">
               <h1 className="siTitle" id="contact">contact</h1>
-              <span className="siDistance"><i class="fa-sharp fa-solid fa-phone"></i> { uni.phone} { uni.link}</span>
-               <span className="siSubtitle"><i class="fa-sharp fa-solid fa-envelope"></i> { uni.types}</span>
+              <span className="siDistance"><i class="fa-sharp fa-solid fa-phone"></i> { uni.phone}</span>
+               <span className="siSubtitle"><i class="fa-sharp fa-solid fa-envelope"></i> { uni.email}</span>
               
             </div>
             </div>
